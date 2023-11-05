@@ -7,8 +7,7 @@ end
 local JB = {}
 
 local setup = function()
-  vim.g.color_name = "darcula"
-  vim.g.colors_name = "darcula"
+  vim.g.color_name = "jb"
   local bg = vim.o.background
 
   local colors = get_colors(bg)
