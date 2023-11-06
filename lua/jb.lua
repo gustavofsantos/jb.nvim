@@ -35,10 +35,10 @@ local setup = function()
   hi(0, "lCursor", { link = "Cursor" })
   hi(0, "LineNr", { fg = colors.gray_5 })
   hi(0, "Directory", { fg = colors.gray_12, bold = true })
-  hi(0, "DiffAdd", { fg = colors.gray_14, bg = colors.green_1 })
-  hi(0, "DiffChange", { fg = colors.gray_14, bg = colors.blue_1 })
-  hi(0, "DiffDelete", { fg = colors.gray_14, bg = colors.red_1 })
-  hi(0, "DiffText", { fg = colors.gray_14, bg = colors.gray_4 })
+  hi(0, "DiffAdd", { fg = colors.green_9, bg = colors.green_1 })
+  hi(0, "DiffChange", { fg = colors.blue_9, bg = colors.blue_1 })
+  hi(0, "DiffDelete", { fg = colors.red_9, bg = colors.red_1 })
+  hi(0, "DiffText", { fg = colors.gray_12, bg = colors.gray_4 })
   hi(0, "ErrorMsg", { fg = colors.gray_14, bg = colors.red_1 })
   hi(0, "Folded", { fg = colors.gray_11, bg = colors.gray_4 })
   hi(0, "FoldColumn", { fg = colors.gray_11, bg = colors.gray_4 })
@@ -133,6 +133,9 @@ local setup = function()
   hi(0, "@tag.attribute", { fg = colors.gray_12, italic = true })
   hi(0, "@tag.delimiter", { fg = colors.html_tag })
   hi(0, "@decorator", { fg = colors.metadata, italic = false })
+  hi(0, "@include.source", { link = "String" })
+  hi(0, "@property", { fg = colors.constant })
+  hi(0, "@punctuation.string.delimiter", { link = "StringDelimiter" })
 
   -- JSON
   hi(0, "@label.json", { fg = colors.constant })
@@ -149,6 +152,7 @@ local setup = function()
   hi(0, "@comment.documentation.javascript", { fg = colors.doc_string })
   hi(0, "@keyword.jsdoc", { fg = colors.green_6 })
   hi(0, "@lsp.type.class.javascript", { fg = colors.gray_12 })
+  hi(0, "@lsp.type.property.javascript", { fg = colors.constant })
 
   -- HTML
   hi(0, "@text.uri.html", { link = "String" })
@@ -176,9 +180,9 @@ local setup = function()
   hi(0, "TelescopePreviewTitle", { fg = colors.gray_12 })
 
   -- Fugitive
-  hi(0, "diffAdded", { fg = colors.gray_12, bg = colors.green_1 })
-  hi(0, "diffRemoved", { fg = colors.gray_12, bg = colors.red_1 })
-  hi(0, "diffChanged", { fg = colors.gray_12, bg = colors.blue_1 })
+  hi(0, "diffAdded", { link = "DiffAdd" })
+  hi(0, "diffRemoved", { link = "DiffDelete" })
+  hi(0, "diffChanged", { link = "DiffChange" })
 
   -- GitSigns
   hi(0, "GitSignsAdd", { fg = colors.green_6 })
@@ -190,6 +194,24 @@ local setup = function()
   hi(0, "GitSignsDelete", { fg = colors.red_6 })
   hi(0, "GitSignsDeleteNr", { fg = colors.red_6 })
   hi(0, "GitSignsDeleteLn", { fg = colors.red_6 })
+
+  -- Diagnostics
+  hi(0, "DiagnosticError", { fg = colors.error })
+  hi(0, "DiagnosticWarn", { fg = colors.warning })
+  hi(0, "DiagnosticInfo", { fg = colors.gray_9 })
+  hi(0, "DiagnosticHint", { fg = colors.gray_9 })
+  hi(0, "DiagnosticUnderlineError", { fg = colors.error, undercurl = true, sp = colors.error })
+  hi(0, "DiagnosticUnderlineWarn", { fg = colors.warning, undercurl = true, sp = colors.warning })
+  hi(0, "DiagnosticUnderlineInfo", { fg = colors.text, undercurl = true, sp = colors.gray_9 })
+  hi(0, "DiagnosticUnderlineHint", { fg = colors.text, undercurl = true, sp = colors.gray_9 })
+  hi(0, "DiagnosticVirtualTextError", { fg = colors.error, bg = colors.red_1, blend = 50 })
+  hi(0, "DiagnosticVirtualTextInfo", { fg = colors.text, undercurl = true, sp = colors.text })
+  hi(
+    0,
+    "DiagnosticVirtualTextWarn",
+    { fg = colors.warning, bg = colors.yellow_1, undercurl = true, sp = colors.warning }
+  )
+  hi(0, "DiagnosticVirtualTextHint", { fg = colors.text, undercurl = true, sp = colors.text })
 
   vim.g.terminal_color_0 = colors.gray_1
   vim.g.terminal_color_1 = colors.red_6
