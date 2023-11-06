@@ -133,12 +133,16 @@ local setup = function()
   hi(0, "@tag.attribute", { fg = colors.gray_12, italic = true })
   hi(0, "@tag.delimiter", { fg = colors.html_tag })
   hi(0, "@decorator", { fg = colors.metadata, italic = false })
-  hi(0, "@include.source", { link = "String" })
+  hi(0, "@include.source", { fg = colors.gray_9 })
+  hi(0, "@include.identifier", { fg = colors.gray_9 })
   hi(0, "@property", { fg = colors.constant })
   hi(0, "@punctuation.string.delimiter", { link = "StringDelimiter" })
 
   -- JSON
   hi(0, "@label.json", { fg = colors.constant })
+
+  -- Python
+  hi(0, "@include.python", { fg = colors.gray_5 })
 
   -- TypeScript
   hi(0, "@attribute.typescript", { fg = colors.metadata })
@@ -151,6 +155,7 @@ local setup = function()
   hi(0, "@string.regex.javascript", { fg = colors.teal_7 })
   hi(0, "@comment.documentation.javascript", { fg = colors.doc_string })
   hi(0, "@keyword.jsdoc", { fg = colors.green_6 })
+  hi(0, "@include.javascript", { fg = colors.gray_5 })
   hi(0, "@lsp.type.class.javascript", { fg = colors.gray_12 })
   hi(0, "@lsp.type.property.javascript", { fg = colors.constant })
 
