@@ -235,7 +235,7 @@ local load_light_theme = function()
   local hi = vim.api.nvim_set_hl
 
   hi(0, "Normal", { fg = colors.gray_1, bg = colors.gray_14 })
-  hi(0, "NormalNC", { fg = colors.gray_1, bg = colors.gray_13 })
+  hi(0, "NormalNC", { fg = colors.gray_1, bg = colors.gray_14 })
   hi(0, "NormalSB", { fg = colors.gray_1, bg = colors.gray_14 })
   hi(0, "SignColumn", { fg = colors.gray_8, bg = colors.gray_14 })
   hi(0, "EndOfBuffer", { fg = colors.gray_8 })
@@ -253,8 +253,8 @@ local load_light_theme = function()
   hi(0, "lCursor", { link = "Cursor" })
   hi(0, "LineNr", { fg = colors.gray_8 })
   hi(0, "Directory", { fg = colors.gray_7, bold = true })
-  hi(0, "DiffAdd", { bg = colors.green_11 })
-  hi(0, "DiffChange", { bg = colors.blue_12 })
+  hi(0, "DiffAdd", { bg = colors.green_9 })
+  hi(0, "DiffChange", { bg = colors.blue_10 })
   hi(0, "DiffDelete", { bg = colors.gray_10 })
   hi(0, "DiffText", { fg = colors.gray_1 })
   hi(0, "ErrorMsg", { fg = colors.gray_1, bg = colors.red_11 })
@@ -278,10 +278,10 @@ local load_light_theme = function()
   -- hi(0, "SpellCap", { fg = colors.blue, bg = colors.none, italic = true, undercurl = true })
   -- hi(0, "SpellLocal", { fg = colors.cyan, bg = colors.none, italic = true, undercurl = true })
   -- hi(0, "SpellRare", { fg = colors.cyan, bg = colors.none, italic = true, undercurl = true })
-  hi(0, "StatusLine", { fg = colors.gray_9, bg = colors.gray_13 })
-  hi(0, "StatusLineNC", { fg = colors.gray_9, bg = colors.gray_11 })
-  hi(0, "StatusLineTerm", { fg = colors.gray_9, bg = colors.gray_13 })
-  hi(0, "StatusLineTermNC", { fg = colors.gray_9, bg = colors.gray_11 })
+  hi(0, "StatusLine", { fg = colors.gray_6, bg = colors.gray_13 })
+  hi(0, "StatusLineNC", { fg = colors.gray_7, bg = colors.gray_11 })
+  hi(0, "StatusLineTerm", { fg = colors.gray_6, bg = colors.gray_13 })
+  hi(0, "StatusLineTermNC", { fg = colors.gray_7, bg = colors.gray_11 })
   hi(0, "TabLineFill", { fg = colors.gray_7, bg = colors.gray_14 })
   hi(0, "TablineSel", { fg = colors.gray_1, bg = colors.gray_14, underline = true })
   hi(0, "Tabline", { fg = colors.gray_7, bg = colors.gray_14 })
@@ -390,19 +390,19 @@ local load_light_theme = function()
   hi(0, "@constructor.lua", { link = "Delimiter" })
 
   -- Telescope
-  hi(0, "TelescopeNormal", { fg = colors.gray_12, bg = colors.gray_2 })
+  hi(0, "TelescopeNormal", { link = "NormalFloat" })
   hi(0, "TelescopeMatching", { fg = colors.gray_2, bg = colors.yellow_7 })
-  hi(0, "TelescopeBorder", { fg = colors.gray_2, bg = colors.gray_2 })
-  hi(0, "TelescopePromptNormal", { fg = colors.gray_12, bg = colors.gray_2 })
-  hi(0, "TelescopePromptBorder", { fg = colors.gray_2, bg = colors.gray_2 })
+  hi(0, "TelescopeBorder", { fg = colors.gray_12, bg = colors.gray_13 })
+  hi(0, "TelescopePromptNormal", { fg = colors.gray_1, bg = colors.gray_13 })
+  hi(0, "TelescopePromptBorder", { fg = colors.gray_12, bg = colors.gray_13 })
   -- hi(0, "TelescopePromptPrefix", { fg = colors.gray_12, bg = colors.gray_3 })
-  hi(0, "TelescopePromptTitle", { fg = colors.gray_12 })
-  hi(0, "TelescopeSelection", { bg = colors.blue_2 })
+  hi(0, "TelescopePromptTitle", { fg = colors.gray_1 })
+  hi(0, "TelescopeSelection", { bg = colors.blue_11 })
   -- hi(0, "TelescopeSelectionCaret", { fg = colors.yellow, bg = colors.yellow_bg })
-  hi(0, "TelescopeResultsTitle", { fg = colors.gray_12 })
-  hi(0, "TelescopeResultsBorder", { fg = colors.gray_2, bg = colors.gray_2 })
-  hi(0, "TelescopePreviewBorder", { fg = colors.gray_3, bg = colors.gray_2 })
-  hi(0, "TelescopePreviewTitle", { fg = colors.gray_12 })
+  hi(0, "TelescopeResultsTitle", { fg = colors.gray_1 })
+  hi(0, "TelescopeResultsBorder", { fg = colors.gray_12, bg = colors.gray_13 })
+  hi(0, "TelescopePreviewBorder", { fg = colors.gray_12, bg = colors.gray_13 })
+  hi(0, "TelescopePreviewTitle", { fg = colors.gray_1 })
 
   -- Fugitive
   hi(0, "diffAdded", { link = "DiffAdd" })
@@ -410,49 +410,49 @@ local load_light_theme = function()
   hi(0, "diffChanged", { link = "DiffChange" })
 
   -- GitSigns
-  hi(0, "GitSignsAdd", { fg = colors.green_6 })
-  hi(0, "GitSignsAddNr", { fg = colors.green_6 })
-  hi(0, "GitSignsAddLn", { fg = colors.green_6 })
-  hi(0, "GitSignsChange", { fg = colors.blue_6 })
-  hi(0, "GitSignsChangeNr", { fg = colors.blue_6 })
-  hi(0, "GitSignsChangeLn", { fg = colors.blue_6 })
-  hi(0, "GitSignsDelete", { fg = colors.red_6 })
-  hi(0, "GitSignsDeleteNr", { fg = colors.red_6 })
-  hi(0, "GitSignsDeleteLn", { fg = colors.red_6 })
+  hi(0, "GitSignsAdd", { fg = colors.green_7 })
+  hi(0, "GitSignsAddNr", { fg = colors.green_7 })
+  hi(0, "GitSignsAddLn", { fg = colors.green_7 })
+  hi(0, "GitSignsChange", { fg = colors.blue_9 })
+  hi(0, "GitSignsChangeNr", { fg = colors.blue_9 })
+  hi(0, "GitSignsChangeLn", { fg = colors.blue_9 })
+  hi(0, "GitSignsDelete", { fg = colors.gray_10 })
+  hi(0, "GitSignsDeleteNr", { fg = colors.gray_10 })
+  hi(0, "GitSignsDeleteLn", { fg = colors.gray_10 })
 
   -- Diagnostics
-  hi(0, "DiagnosticError", { fg = colors.error })
-  hi(0, "DiagnosticWarn", { fg = colors.warning })
-  hi(0, "DiagnosticInfo", { fg = colors.gray_9 })
-  hi(0, "DiagnosticHint", { fg = colors.gray_9 })
+  hi(0, "DiagnosticError", { fg = colors.gray_1, bg = colors.red_11 })
+  hi(0, "DiagnosticWarn", { fg = colors.gray_1, bg = colors.yellow_10 })
+  hi(0, "DiagnosticInfo", { fg = colors.gray_1, bg = colors.blue_13 })
+  hi(0, "DiagnosticHint", { fg = colors.gray_1, bg = colors.gray_13 })
   hi(0, "DiagnosticUnderlineError", { fg = colors.error, undercurl = true, sp = colors.error })
   hi(0, "DiagnosticUnderlineWarn", { fg = colors.warning, undercurl = true, sp = colors.warning })
-  hi(0, "DiagnosticUnderlineInfo", { fg = colors.text, undercurl = true, sp = colors.gray_9 })
-  hi(0, "DiagnosticUnderlineHint", { fg = colors.text, undercurl = true, sp = colors.gray_9 })
-  hi(0, "DiagnosticVirtualTextError", { fg = colors.error, bg = colors.red_1, blend = 50 })
+  hi(0, "DiagnosticUnderlineInfo", { fg = colors.text, undercurl = true, sp = colors.text })
+  hi(0, "DiagnosticUnderlineHint", { fg = colors.text, undercurl = true, sp = colors.text })
+  hi(0, "DiagnosticVirtualTextError", { fg = colors.error, bg = colors.red_11, blend = 50 })
   hi(0, "DiagnosticVirtualTextInfo", { fg = colors.text, undercurl = true, sp = colors.text })
   hi(
     0,
     "DiagnosticVirtualTextWarn",
-    { fg = colors.warning, bg = colors.yellow_1, undercurl = true, sp = colors.warning }
+    { fg = colors.warning, bg = colors.yellow_10, undercurl = true, sp = colors.warning }
   )
   hi(0, "DiagnosticVirtualTextHint", { fg = colors.text, undercurl = true, sp = colors.text })
 
   vim.g.terminal_color_0 = colors.gray_1
-  vim.g.terminal_color_1 = colors.red_6
-  vim.g.terminal_color_2 = colors.green_6
-  vim.g.terminal_color_3 = colors.yellow_7
-  vim.g.terminal_color_4 = colors.blue_6
-  vim.g.terminal_color_5 = colors.purple_6
-  vim.g.terminal_color_6 = colors.teal_6
+  vim.g.terminal_color_1 = colors.red_1
+  vim.g.terminal_color_2 = colors.green_1
+  vim.g.terminal_color_3 = colors.yellow_1
+  vim.g.terminal_color_4 = colors.blue_2
+  vim.g.terminal_color_5 = colors.purple_2
+  vim.g.terminal_color_6 = colors.teal_1
   vim.g.terminal_color_7 = colors.gray_8
   vim.g.terminal_color_8 = colors.gray_4
   vim.g.terminal_color_9 = colors.orange_6
-  vim.g.terminal_color_10 = colors.green_9
-  vim.g.terminal_color_11 = colors.yellow_9
-  vim.g.terminal_color_12 = colors.blue_9
-  vim.g.terminal_color_13 = colors.purple_9
-  vim.g.terminal_color_14 = colors.teal_9
+  vim.g.terminal_color_10 = colors.green_4
+  vim.g.terminal_color_11 = colors.yellow_3
+  vim.g.terminal_color_12 = colors.blue_4
+  vim.g.terminal_color_13 = colors.purple_4
+  vim.g.terminal_color_14 = colors.teal_3
   vim.g.terminal_color_15 = colors.gray_12
   vim.g.terminal_color_background = colors.gray_12
   vim.g.terminal_color_foreground = colors.gray_1
